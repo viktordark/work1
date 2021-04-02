@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Contact</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <div class="row header-content">
+            <a href="../index/index.html" class="col-md-2">
+                <img src="../../img/Логотип.png" alt="">
+            </a>
+            
+            <div class="col-md-10 header-right">
+                <div class="search">
+                    <input type="search" name="search" placeholder="Search" size=30px>
+                    <button type="submit">
+                        <img src="../../img/ico_search.svg" alt="">
+                    </button>
+                </div>
+
+                <input type="checkbox" class="toggleMenu" id="menu">
+                <label for="menu" class="toggleMenu">
+                    <img src="../../img/Меню.png" width="50px" height="50px" alt="">
+                </label>
+
+                <ul class="header-nav-list">
+                    <li class="header-nav-item"><a href="../index/index.html">Home</a></li>
+                    <li class="header-nav-item"><a href="">Company Profile</a></li>
+                    <li class="header-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
+                    <li class="header-nav-item"><a href="">Services</a></li>
+                    <li class="header-nav-item"><a href="">R & D</a></li>
+                    <li class="header-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <img src="../../img/bg_вид.jpg" class="top-photo"></img>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Contact us</h1>
+
+            <table class="cart">
+                <tr class="cart-list">
+                    <td class="cart-item" v-for="item in cart">
+                        <div class="cart-item-img">
+                            <img :src="'../../images/'+item.image" alt="">
+                        </div>
+                        <div class="cart-item-right">
+                            <div class="cart-item-subtitle">
+                                <h2>{{item.title}}</h2>
+                                <p>{{item.short_text}}</p>
+                            </div>
+                            <a class="cart-cross-img" href="#" @click.prevent="removeFromCart(item.id)">
+                                <img src="../../img/Кресты.png" alt="">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <form class="row" @submit.prevent = "makeOrder()" action="" v-if="formVisible">
+                <div class="col-md-4">
+                    <div class="form-item">
+                        <p>Name *</p>
+                        <input v-model="contactFields[0].text" required type="text"></input>
+                    </div>
+                    <div class="form-item">
+                        <p>Company Name</p>
+                        <input v-model="contactFields[1].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>Position</p>
+                        <input v-model="contactFields[2].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>City</p>
+                        <input v-model="contactFields[3].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>Country</p>
+                        <input v-model="contactFields[4].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>Telephone</p>
+                        <input v-model="contactFields[5].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>Email *</p>
+                        <input v-model="contactFields[6].text" required type="email">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-item">
+                        <p>You are a</p>
+                        <select v-model="contactFields[7].text" >
+                            <option>seed producer</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <p>If other, please specify</p>
+                        <input v-model="contactFields[8].text" type="text">
+                    </div>
+                    <div class="form-item">
+                        <p>You are interested in</p>
+                        <textarea v-model="contactFields[9].text" type="text" rows=15></textarea>
+                    </div>
+                    <div class="form-item" id="verify-item" >
+                        <p>Please type this code</p>
+                        <div class="verify">
+                            <img src="../../img/shifr.png" alt="">
+                            <input type="text">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <ul class="contact-list" v-if="!formVisible">
+                <li class="contact-item" v-for="field in contactFields">
+                    <div class="field-text" v-if="field.text">
+                        <h2>{{field.caption}}</h2>
+                        <p>{{field.text}}</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="address">
+        <h2>Our Address</h2>
+        <p>
+            AGRIDERA Seeds & Agriculture Ltd.<br>
+            P.O Box 103,<br>
+            Gedera 70750, Israel.<br>
+            Telephone: <span>+972 8 944 9222</span>
+        </p>
+    </div>
+
+    <div class="footer">
+        <div class="row footer-top">
+    
+            <div class="col-md-8 footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="">Profile</a></li>
+                    <li class="footer-nav-item"><a href="">Managment</a></li>
+                    <li class="footer-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
+                    <li class="footer-nav-item"><a href="">R&D</a></li>
+                    <li class="footer-nav-item"><a href="">Links</a></li>
+                    <li class="footer-nav-item"><a href="">Sitemap</a></li>
+                    <li class="footer-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-md-4 footer-socials">
+                <ul class="socials-list">
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/in.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/inst.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/youtube.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/twit.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/Facebook.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyrighted">
+            <h4>agridera seeds & agriculture ltd. © 2021</h4>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="../../main.js"></script>
+</body>
+</html>

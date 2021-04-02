@@ -1,0 +1,530 @@
+@media (max-width: 1920px)
+{
+    
+}
+
+@media (max-width: 1600px)
+{
+
+
+}
+
+@media (max-width: 1480px)
+{
+    .search{
+        font-size: 20px;
+    }
+
+    .search::after{
+        width: 420px;
+    }
+
+    .header-nav-item {
+        font-size: 21px;
+    }   
+
+    .products{
+        padding: 44px 6%;
+    }
+}
+
+@media (max-width: 1366px)
+{
+    header{
+        height: 823px;
+    }
+    
+}
+
+@media (max-width: 1280px)
+{
+    .vision-img{
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 1024px)
+{
+    .header-content .row{
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .header-content{
+        max-width: 900px;
+    }
+
+
+    .toggleMenu img{
+        margin-top: 27px;
+    }
+
+    label.toggleMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .header-nav-list{
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 80px;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    input.toggleMenu:checked + label.toggleMenu ~ .header-nav-list{
+        display: flex;
+    }
+
+    .header-nav-list li{
+        font-size: 18px;
+        border: 1px solid gray;
+        text-align: center;
+        margin: 0;
+        padding: 3px;
+        background: #fff;
+    }
+
+    .search::after {
+        width: 340px;
+        margin-bottom: 0;
+    }
+
+    .header-right{
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .search{
+        font-size: 20px;
+        margin-right: 80px;
+    }
+
+    .search input{
+        width: 300px;
+    }
+
+    .header-center h1{
+        font-size: 70px;
+        letter-spacing: 2px;
+        line-height: 90px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .header-center button{
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+
+    .products p{
+        width: min-content;
+    }
+
+    .about-container{
+        background-image: none;
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-vision{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .content-vision-text{
+        width: 540px;
+        padding: 0;
+    }
+
+    .vision-img{
+        width: 540px;
+        height: 500px;
+        padding: 0;
+    }
+
+    .content-mission{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-mission-text{
+        width: 540px;
+        padding: 0;
+    }
+
+    .mission-img{
+        width: 540px;
+        height: 500px;
+        padding: 0;
+    }
+
+    .about-content h2{
+        font-size: 78px;
+        margin-top: 20px;
+    }
+
+    .about-content p{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .activities-content{
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .activities-content .row{
+        margin: 0;
+    }
+
+    .activities-subtitle{
+        font-size: 24px;
+    }
+
+    .activities-list-item p{
+        font-size: 18px;
+    }
+
+    .footer-top{
+        padding: 30px;
+    }
+
+    .socials-list-item{
+        width: auto;
+        height: auto;
+    }
+
+    .footer-socials img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    header{
+        height: 1024px;
+    }
+
+    .logo {
+        height: 12em;
+    }
+
+    .header-content .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    
+    .header-right{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .search{
+        margin-right: 0;
+        margin-top: 30px;
+    }
+
+    .search input {
+        width: 300px;
+    }
+
+    .search::after {
+        width: 335px;
+        margin-bottom: 0;
+    }
+
+    .toggleMenu img{
+        position: absolute;
+        top: -230px;
+        right: -160px;
+    }
+
+    .header-nav-list{
+        top: -225px;
+        right: -100px;
+    }
+
+    .header-nav-list li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        width: 540px;
+        height: 50px;
+    }
+
+    .header-center {
+        height: auto;
+        margin-top: 125px;
+        padding-bottom: 30px;
+    }
+
+    .header-center h1 {
+        font-size: 64px;
+        letter-spacing: 2px;
+        line-height: 82px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 80px;
+    }
+
+    .products-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-list-item{
+        padding: 20px;
+    }
+
+    .products-list-item img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .products-list-item p{
+        font-size: 36px;
+    }
+
+    .activities-content h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 56px;
+    }
+
+    .activities-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activities-list-item{
+        width: unset;
+    }
+
+    .activities-list-item p{
+        font-size: 24px;
+    }
+
+    .activities-subtitle{
+        font-size: 30px;
+    }
+
+    .activities-list h3::after{
+        width: 280px;
+        border-bottom: 2px solid #57984C;
+    }
+
+    .footer-nav{
+        display: none;
+    }
+
+    .socials-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .socials-list-item{
+        margin: 0;
+    }
+
+    .footer-socials{
+        width: 400px;
+    }
+
+    .footer-socials img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 640px)
+{
+    header{
+        height: unset;
+    }
+
+    .header-center {
+        margin-top: 25px;
+    }
+
+    .toggleMenu img{
+        right: 0;
+    }
+
+    .header-nav-list li{
+        width: 270px;
+    }
+
+    .header-nav-list{
+        top: -195px;
+        right: 50px;
+    }
+
+    .search{
+        font-size: 24px;
+    }
+
+    .header-center h1{
+        font-size: 60px;
+        letter-spacing: 2px;
+        line-height: 75px;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .activities-content .col-md-4{
+        padding: 0;
+    }
+
+    .header-center h1 {
+        font-size: 43px;
+        line-height: 56px;
+    }
+
+    .toggleMenu img {
+        right: 0px;
+    }
+
+    .content-vision-text{
+        width: 95%;
+    }
+    
+    .content-mission-text{
+        width: 95%;
+    }
+
+    .vision-img{
+        width: 100%;
+        height: unset;
+    }
+
+    .mission-img{
+        width: 100%;
+        height: unset;
+    }
+
+    #vision-photo{
+        width: 95%;
+        height: auto;
+    }
+
+    #mission-photo{
+        width: 95%;
+        height: auto;
+    }
+
+    .mission-play-img{
+        top: 37%;
+        left: 35%;  
+    }
+}
+
+@media (max-width: 400px)
+{
+    .header-nav-list {
+        right: 50px;
+    }
+
+    .header-nav-list li{
+        width: 260px;
+    }
+
+    .col-md-4{
+        padding: 0;
+    }
+
+    .toggleMenu img{
+        right: 0px;
+    }
+
+    .header-center {
+        margin-top: 40px;
+    }
+
+    .header-center h1{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 320px)
+{
+    .header-content .row {
+        padding-top: 20px;
+    }
+
+    .logo {
+        height: 10em;
+    }
+
+    .search input {
+        width: 250px;
+    }
+
+    .search::after {
+        width: 290px;
+        margin-bottom: 0;
+    }
+
+    .search{
+        width: 100%;
+    }
+
+    .header-nav-list {
+        top: -165px;
+    }
+
+    .header-nav-list li {
+        width: 240px;
+    }
+    
+    .toggleMenu img {
+        top: -200px;
+    }
+
+    .header-center {
+        margin-top: 25px;
+    }
+
+    .header-center h1 {
+        font-size: 30px;
+        line-height: 45px;
+        margin-bottom: 28px;
+    }
+
+    .activities-list-item {
+        width: unset;
+    }
+
+    .footer-top {
+        padding: 15px;
+    }
+
+    .footer-copyrighted h4 {
+        font-size: 12px;
+    }
+}

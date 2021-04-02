@@ -1,0 +1,366 @@
+body{
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #324950;
+    background: #fff;
+}
+
+a:hover{
+    color: #57984C;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus{
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+li{
+    text-decoration: none;
+}
+
+header{
+    display: block;
+    width: 100%;
+    height: 122px;
+    margin: auto auto;
+    padding-top: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.header-content{
+    margin: 0 auto;
+    width: 1127px;
+}
+
+.logo{
+    margin-bottom: 19px;
+}
+
+.search{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+.search button{
+    border: none;
+    background: transparent;
+}
+
+.search::after{
+    display: block;
+    position: relative;
+    content: "";
+    width: 350px;
+    border-bottom: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.search input{
+    border: none;
+    background: transparent;
+    margin-right: 5px;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search button:focus{
+    outline: none;
+}
+
+.toggleMenu{
+    display: none;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-nav-list{
+    display: flex;
+    width: auto;
+    text-align: right;
+}
+
+.header-nav-item{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+.header-nav-item a{
+    color: #324950;
+    text-decoration: none;
+}
+
+.footer{
+    display: block;
+    width: 100%;
+    background: #2D3F45;
+
+}
+
+.footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-top{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    width: 1055px;
+    height: 76px;
+}
+
+.footer-nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav-item a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+.socials-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.socials-list-item{
+    display: flex;
+    width: 31px;
+    height: 31px;
+    margin-left: 13.8px;
+}
+
+
+.footer-copyrighted{
+    background: #324950;
+    padding: 13px;
+    width: 100%;
+}
+
+.footer-copyrighted h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: #B9B9B9;
+
+    margin: 0;
+}
+
+.tomatoes-top-photo img{
+    width: 100%;
+}
+
+.container{
+    display: block;
+    align-items: center;
+    width: 100%;
+    background: #e8fcd9;
+    padding: 0;
+}
+
+.content{
+    display: block;
+    width: 1152px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.content h1{
+    color: #324950;
+
+    margin-top: 50px;
+}
+
+.content h1::after{
+    display: flex;
+    position: relative;
+
+    content: "\2716\2716\2716\2716\2716";
+    
+    letter-spacing: 3px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #57984C;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.article-about-tomatoes{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1097px;
+    
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #324950;
+    line-height: 25.5px;
+}
+
+.article-about-tomatoes p{
+    margin-bottom: 25px;
+}
+
+.phrase{
+    display: flex;
+    margin-bottom: 33px;
+    padding: 0 25px;
+}
+
+.phrase p{
+    margin: auto 0;
+}
+
+.phrase::before{
+    display: inline-flex;
+    content: "";
+    border-left: 4px solid red;
+    border-radius: 4px;
+    height: auto;
+    margin-right: 26px;
+}
+
+.programs{
+    background: #fff;
+    width: 100%;
+    height: 450px;
+    padding: 50px 20px;
+    margin-bottom: 33px;
+}
+
+.programs-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.programs-list-item{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.programs-list-item h2{
+    width: 300px;
+    height: 58px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.programs-list-item p{
+    display: block;
+    width: 340px;
+    height: 262px;
+    margin-top: 20px;
+}
+
+.programs-list-item h2::after{
+    display: block;
+    position: relative;
+    content: "";
+    width: 340px;
+    border: 1px solid #324950;
+    margin: 20px 0;
+}
+
+.tomato-types{
+    display: block;
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.tomato-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.tomato-list-item{
+    height: fit-content;
+    margin: 10px
+}
+
+.tomato-list-item a{
+    display: block;
+}
+
+.tomato-list-item a:hover{
+    box-shadow: 0 0 10px #00000080;
+}
+
+#product-img{
+    width: 320px;
+    height: 240px;
+    overflow: hidden;
+}
+
+#product-img img{
+    width: 100%;
+}
+
+.tomato-type-subtitle{
+    display: block;
+    width: unset;
+    padding: 10px 0;
+    background: #fff;
+    text-align: center;
+    color: #57984C;
+}
+
+.tomato-type-subtitle h2{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tomato-type-subtitle p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tomato-type-subtitle .link-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #57984C;
+}
+
+
+

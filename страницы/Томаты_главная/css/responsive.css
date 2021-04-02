@@ -1,0 +1,398 @@
+@media(max-width: 1280px)
+{
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        width: unset;
+    }
+}
+
+@media(max-width: 1024px)
+{
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        width: unset;
+    }
+
+    .header-content .col-md-10{
+        padding: 0;
+    }
+
+    .header-content .col-md-2{
+        width: unset;
+        padding: 0;
+    }
+
+    header{
+        height: unset;
+    }
+
+    .header-content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-content .col-md-2 img{
+        width: auto;
+        height: 150px;
+    }
+
+    .header-right{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    label.toggleMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggleMenu img{
+        position: absolute;
+        top: -190px;
+        right: 5px;
+        margin-top: 27px;
+    }
+
+    input.toggleMenu:checked + label.toggleMenu ~ .header-nav-list{
+        display: flex;
+    }
+
+    .header-nav-list{
+        display: none;
+        position: absolute;
+        top: -155px;
+        right: 60px;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-nav-list li{
+        font-size: 20px;
+        border: 1px solid gray;
+        text-align: center;
+        margin: 0;
+        padding: 4px;
+        background: #fff;
+        width: 183px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .header-nav-list li:hover{
+        background: #B9B9B9;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .phrase{
+        font-size: 18px;
+    }
+
+    .article-about-tomatoes{
+        font-size: 20px;
+        line-height: 30px;
+        width: unset;
+        max-width: 1024px;
+        padding: 0 25px;
+        margin: unset;
+    }
+
+    .article-about-tomatoes h1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .programs{
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 50px 0px;
+        justify-content: center;
+    }
+
+    .programs-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .programs-list-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .programs-list-item h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        height: unset;
+        font-size: 30px;
+    }
+
+    .programs-list-item h2::after{
+        width: 400px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .programs-list-item p{
+        width: 100%;
+        height: unset;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .programs-list-item:last-child{
+        margin-bottom: 0px;
+    }
+
+    .tomato-types{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .tomato-list{
+        justify-content: center;
+    }
+
+    .footer-top{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .footer-socials img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-nav{
+        display: none;
+    }
+
+    .socials-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .socials-list-item{
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
+    .footer-socials{
+        width: 300px;
+    }
+}
+
+@media(max-width: 768px)
+{
+
+    .header-nav-list li{
+        width: 240px;
+    }
+
+    .phrase{
+        font-size: 22px;
+    }
+
+    .programs-list-item p {
+        font-size: 22px;
+    }
+
+    .tomato-types{
+        padding: 0 50px;
+    }
+
+    .tomato-list-item{
+        width: 100%;
+    }
+
+    #product-img{
+        width: unset;
+        height: 500px;
+    }
+
+    .tomato-list-item img{
+
+    }
+
+    .tomato-type-subtitle{
+
+    }
+
+    .tomato-type-subtitle h2 {
+        font-size: 36px;
+    }
+
+    .tomato-type-subtitle p {
+        font-size: 24px;
+    }
+
+    .footer-socials{
+        width: 400px;
+    }
+
+    .footer-socials img{
+        width: 50px;
+        height: 50px;
+    }    
+}
+
+@media(max-width: 640px){
+
+    #product-img{
+        height: 382px;
+    }
+    
+}
+
+@media(max-width: 480px)
+{
+    .phrase{
+        font-size: 19px;
+    }
+
+    .programs-list-item{
+        padding: 0 5px;
+    }
+
+    .tomato-list-item{
+
+    }
+
+    #product-img{
+        height: 270px;
+    }
+
+    .tomato-list-item img{
+
+    }
+
+    .tomato-type-subtitle{
+
+    }
+
+    .tomato-type-subtitle h2 {
+        font-size: 30px;
+    }
+
+    .tomato-type-subtitle p {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 400px)
+{
+
+    .header-content .col-md-2{
+        padding: 0;
+    }
+
+    .article-about-tomatoes p {
+        font-size: 18px;
+    }
+
+    .article-about-tomatoes h1{
+        font-size: 32px;
+        margin-top: 30px; 
+    }
+
+    .article-about-tomatoes h1::after{
+        margin: 30px; 
+    }
+
+    .programs-list-item{
+        padding: 0;
+    }
+ 
+    .programs-list-item h2::after{
+        width: 300px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .programs-list-item p{
+        font-size: 18px;
+    }
+
+    .tomato-types{
+        padding: 0 12.5px;
+    }
+
+    #product-img{
+        height: 265px;
+    }
+
+    .tomato-type-subtitle h2 {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 320px)
+{
+
+    .search input {
+        width: 250px;
+    }
+
+    .search::after {
+        width: 285px;
+        margin-bottom: 20px;
+    }
+
+    .search{
+        width: 100%;
+    }
+
+    .toggleMenu img{
+        right: 0px;
+    }
+    
+    .header-nav-list li{
+        width: 170px;
+        height: 34px;
+    }
+
+    .tomato-list{
+        margin-bottom: 20px;
+    }
+
+    #product-img{
+        height: 205px;
+    }
+
+
+    .tomato-type-subtitle h2 {
+        font-size: 26px;
+    }
+
+    .tomato-type-subtitle p{
+        font-size: 18px;
+    }
+
+    .footer-top {
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer-copyrighted h4{
+        font-size: 12px;
+    }
+}

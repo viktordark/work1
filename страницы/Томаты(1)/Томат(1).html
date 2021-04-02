@@ -1,0 +1,165 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>TomatoOne</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <div class="row header-content">
+            <a href="../../index.html" class="col-md-2">
+                <img src="../../img/Логотип.png" alt="">
+            </a>
+            
+            <div class="col-md-10 header-right">
+                <div class="search">
+                    <input type="search" name="search" placeholder="Search" size=30px>
+                    <button type="submit">
+                        <img src="../../img/ico_search.svg" alt="">
+                    </button>
+                </div>
+
+                <input type="checkbox" class="toggleMenu" id="menu">
+                <label for="menu" class="toggleMenu">
+                    <img src="../../img/Меню.png" width="50px" height="50px" alt="">
+                </label>
+
+                <ul class="header-nav-list">
+                    <li class="header-nav-item"><a href="../index/index.html">Home</a></li>
+                    <li class="header-nav-item"><a href="">Company Profile</a></li>
+                    <li class="header-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
+                    <li class="header-nav-item"><a href="">Services</a></li>
+                    <li class="header-nav-item"><a href="">R & D</a></li>
+                    <li class="header-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-6 first-column">
+
+                    <div class="return">
+                        <a href="../Томаты_главная/Томаты_главная.html">
+                            <p><img src="../../img/Стрелка_1.png" alt="">Return to all kiwis</p>
+                        </a>
+                    </div>
+
+                    <div class="title">
+                        <h1>
+                            <span>{{product.title}}</span>
+                            {{product.short_text}}
+                        </h1>
+                    </div>
+                    <div class="slogan">
+                        <img src="../../img/Томаты.png" alt="" class="logo">
+                        <p>
+                            Very high yield and excellent fruits quality!
+                        </p>
+                    </div>
+                    <ul id="list-1" class="characteristics-list">
+                        <h3>CHARACTERISTICS</h3>
+                            <li class="list-item"><b>Resistance</b></li>
+                            <li class="list-item">HR: ToMV:0-2; Fol: 1,2; Ve/Vd;</li>
+                            <li class="list-item">IR: TYLCV</li>
+                    </ul>
+                    <ul class="characteristics-list">
+                        <h3>Plant</h3>
+                        <div class="item-wrapper">
+                            <li class="list-item"><span>Strong vigor that provides good leaf coverage.</span></li>
+                            <li class="list-item"><span>Very high productivity with good fruit setting.</span></li>
+                            <li class="list-item"><span>Early matured variety.</span></li>
+                        </div>
+                    </ul>
+                    <ul class="characteristics-list">
+                        <h3>Fruit</h3>
+                        <div class="item-wrapper">
+                            <li class="list-item"><span>Long shelf life on plant and post harvest.</span></li>
+                            <li class="list-item"><span>Nice shiny attractive deep red color.</span></li>
+                            <li class="list-item"><span>Average fruit size: 140 – 160 grams.</span></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-md-6 second-column">
+                    <div class="img-wrapper">
+                        <img :src="'../../images/'+product.image" class="tomato-img" alt="">
+                    </div>
+                    <div class="download">
+                        <a @click.prevent="addToCart(product.id)" v-if="!btnVisible">Add to cart</a>
+                        <a href="../Ваша_инфо/Ваша_инфо.html" v-if="btnVisible">Go to cart</a>
+                    </div>
+                    <ul class="characteristics-list">
+                        <h3>Cycle</h3>
+                        <div class="item-wrapper">
+                            <li class="list-item"><span>Spring</span></li>
+                            <li class="list-item"><span>Fall</span></li>
+                            <li class="list-item"><span>Winter</span></li>
+                        </div>
+                    </ul>
+                    <ul class="characteristics-list" style="list-style-type: none;">
+                        <h3>Color</h3>
+                        <li class="list-item" style="margin-left: 0;">
+                            <span style="padding-left: 0;">Red</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row footer-top">
+    
+            <div class="col-md-8 footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="">Profile</a></li>
+                    <li class="footer-nav-item"><a href="">Managment</a></li>
+                    <li class="footer-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
+                    <li class="footer-nav-item"><a href="">R&D</a></li>
+                    <li class="footer-nav-item"><a href="">Links</a></li>
+                    <li class="footer-nav-item"><a href="">Sitemap</a></li>
+                    <li class="footer-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-md-4 footer-socials">
+                <ul class="socials-list">
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/in.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/inst.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/Facebook.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/youtube.png" alt=""></a>
+                    </li>
+                    <li class="socials-list-item">
+                        <a href="#"><img src="../../img/twit.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyrighted">
+            <h4>agridera seeds & agriculture ltd. © 2021</h4>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="../../main.js"></script>
+</body>
+</html>
