@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,50 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="manifest" href="../../manifest.json">
     <title>Agridera</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        function askPermission(){
+            return new Promise(function(resolve, reject){
+                const permissionResult = Notification.requestPermission(function(result){
+                resolve(result);
+            });
+            if (permissionResult){
+                    permissionResult.then(resolve, reject);
+                }
+            })
+            .then(function (permissionResult){
+                if (permissionResult !== 'granted'){
+                    throw new Error('We weren\'t greanted permission.');
+                }
+            });
+        }
 
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker
+            .register('../../sw.js')
+                .then(function (){
+                    console.log('Service worker registered!');
+                });
+            navigator.serviceWorker.ready.then(registration =>{
+                if ('PushManager' in window){
+                    document.querySelector('button.read-more')
+                    .addEventListener('click', () =>{
+                        askPermission()
+                    });
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            
+
             <div class="row">
                 <div class="col-md-4">
                     <img src="../../img/Логотип.png" alt="" class="logo">
@@ -30,11 +64,11 @@
                             <img src="../../img/ico_search.svg" alt="">
                         </button>
                     </div>
-                    <input type="checkbox"class="toggleMenu" id="menu">
+                    <input type="checkbox" class="toggleMenu" id="menu">
                     <label for="menu" class="toggleMenu">
                         <img src="../../img/Меню.png" width="50px" height="50px" alt="">
                     </label>
-                    
+
                     <ul class="header-nav-list">
                         <li class="header-nav-item"><a href="../index/index.html">Home</a></li>
                         <li class="header-nav-item"><a href="">Company Profile</a></li>
@@ -45,10 +79,10 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="header-center">
                 <h1 class="title">Agridera Seeds and Agriculture Ltd</h1>
-                <button class="read-more">Read more</button>
+                <button class="read-more">SUBSCRIBE FOR NOTIFICATIONS</button>
             </div>
 
         </div>
@@ -57,37 +91,37 @@
     <div class="products">
         <ul class="products-list">
             <li class="products-list-item">
-                    <img src="../../img/Пшеница.png" alt="">
+                <img src="../../img/Пшеница.png" alt="">
                 <p>Wheat</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Арбуз.png" alt="">
+                <img src="../../img/Арбуз.png" alt="">
                 <p>Confection Watermelon</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Клевер.png" alt="">
+                <img src="../../img/Клевер.png" alt="">
                 <p>Clover</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Подсолнух.png" alt="">
+                <img src="../../img/Подсолнух.png" alt="">
                 <p>Confection Sunflower</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Томаты.png" alt="">
+                <img src="../../img/Томаты.png" alt="">
                 <p>Tomato</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Баклажан.png" alt="">
+                <img src="../../img/Баклажан.png" alt="">
                 <p>Eggplant P/O</p>
             </li>
 
             <li class="products-list-item">
-                    <img src="../../img/Шапка.png" alt="">
+                <img src="../../img/Шапка.png" alt="">
                 <p>Ornamental Sunflower</p>
             </li>
 
@@ -99,9 +133,9 @@
             <div class="row content-vision">
                 <div class="col-md-6 content-vision-text">
                     <h2 class="about-subtitle">Vision</h2>
-                    <p>We believe in long-term growth with an emphasis on the potential of emerging markets. 
-                       We also support the global need of
-                       feeding the growing population.</p>
+                    <p>We believe in long-term growth with an emphasis on the potential of emerging markets.
+                        We also support the global need of
+                        feeding the growing population.</p>
                 </div>
                 <div class="col-md-6 vision-img">
                     <img src="../../img/Vision.png" id="vision-photo" alt="">
@@ -115,92 +149,92 @@
                 </div>
                 <div class="col-md-6 content-mission-text">
                     <h2 class="about-subtitle">Mission</h2>
-                    <p>Breeding and marketing seeds for advanced field crops and 
-                       vegetable varieties that provide an added value to all supply
-                       chain partners.</p>
+                    <p>Breeding and marketing seeds for advanced field crops and
+                        vegetable varieties that provide an added value to all supply
+                        chain partners.</p>
                 </div>
             </div>
-    </div>
-
-    <div class="activities-container">
-        <div class="activities-content">
-            <h2>Agridera's main activities</h2>
-            <div class="row">
-                <ul class="row activities-list">
-                    <li class="col-md-4 activities-list-item">
-                        <div id="seeds-photo-1"></div>
-                        <h3 class="activities-subtitle">Open field crop seeds</h3>
-                        <p>wheat, cotton, legumes,
-                            hybrid confection sunflower</p>
-                    </li>
-                
-                    <li class="col-md-4 activities-list-item">
-                        <div id="seeds-photo-2"></div>
-                        <h3 class="activities-subtitle">Vegetable seeds</h3>
-                        <p>hybrid open field tomatoes,
-                            eggplant, onion, paprika, etc.</p>
-                    </li>
-                
-                    <li class="col-md-4 activities-list-item">
-                        <div id="seeds-photo-3"></div>
-                        <h3 class="activities-subtitle">Ornamental seeds</h3>
-                        <p>hybrid cut sunflowers, hybrid
-                            patio tomatoes, Bells of Irland, etc.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="row footer-top">
-
-            <div class="col-md-8 footer-nav">
-                <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="">Profile</a></li>
-                    <li class="footer-nav-item"><a href="">Managment</a></li>
-                    <li class="footer-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
-                    <li class="footer-nav-item"><a href="">R&D</a></li>
-                    <li class="footer-nav-item"><a href="">Links</a></li>
-                    <li class="footer-nav-item"><a href="">Sitemap</a></li>
-                    <li class="footer-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 footer-socials">
-                <ul class="socials-list">
-
-                    <li class="socials-list-item">
-                        <a href="#"><img src="../../img/in.png" alt=""></a>
-                    </li>
-
-                    <li class="socials-list-item">
-                        <a href="#"><img src="../../img/inst.png" alt=""></a>
-                    </li>
-
-                    <li class="socials-list-item">
-                        <a href="#"><img src="../../img/Facebook.png" alt=""></a>
-                    </li>
-
-                    <li class="socials-list-item">
-                        <a href="#"><img src="../../img/youtube.png" alt=""></a>
-                    </li>
-
-                    <li class="socials-list-item">
-                        <a href="#"><img src="../../img/twit.png" alt=""></a>
-                    </li>
-
-                </ul>
-            </div>
-
         </div>
 
-        
-        <div class="footer-copyrighted">
-            <h4>agridera seeds & agriculture ltd. © 2021</h4>
+        <div class="activities-container">
+            <div class="activities-content">
+                <h2>Agridera's main activities</h2>
+                <div class="row">
+                    <ul class="row activities-list">
+                        <li class="col-md-4 activities-list-item">
+                            <div id="seeds-photo-1"></div>
+                            <h3 class="activities-subtitle">Open field crop seeds</h3>
+                            <p>wheat, cotton, legumes,
+                                hybrid confection sunflower</p>
+                        </li>
+
+                        <li class="col-md-4 activities-list-item">
+                            <div id="seeds-photo-2"></div>
+                            <h3 class="activities-subtitle">Vegetable seeds</h3>
+                            <p>hybrid open field tomatoes,
+                                eggplant, onion, paprika, etc.</p>
+                        </li>
+
+                        <li class="col-md-4 activities-list-item">
+                            <div id="seeds-photo-3"></div>
+                            <h3 class="activities-subtitle">Ornamental seeds</h3>
+                            <p>hybrid cut sunflowers, hybrid
+                                patio tomatoes, Bells of Irland, etc.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-    </div>
+
+        <div class="footer">
+            <div class="row footer-top">
+
+                <div class="col-md-8 footer-nav">
+                    <ul class="footer-nav-list">
+                        <li class="footer-nav-item"><a href="">Profile</a></li>
+                        <li class="footer-nav-item"><a href="">Managment</a></li>
+                        <li class="footer-nav-item"><a href="../Томаты_главная/Томаты_главная.html">Products</a></li>
+                        <li class="footer-nav-item"><a href="">R&D</a></li>
+                        <li class="footer-nav-item"><a href="">Links</a></li>
+                        <li class="footer-nav-item"><a href="">Sitemap</a></li>
+                        <li class="footer-nav-item"><a href="../Ваша_инфо/Ваша_инфо.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-socials">
+                    <ul class="socials-list">
+
+                        <li class="socials-list-item">
+                            <a href="#"><img src="../../img/in.png" alt=""></a>
+                        </li>
+
+                        <li class="socials-list-item">
+                            <a href="#"><img src="../../img/inst.png" alt=""></a>
+                        </li>
+
+                        <li class="socials-list-item">
+                            <a href="#"><img src="../../img/Facebook.png" alt=""></a>
+                        </li>
+
+                        <li class="socials-list-item">
+                            <a href="#"><img src="../../img/youtube.png" alt=""></a>
+                        </li>
+
+                        <li class="socials-list-item">
+                            <a href="#"><img src="../../img/twit.png" alt=""></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="footer-copyrighted">
+                <h4>agridera seeds & agriculture ltd. © 2021</h4>
+            </div>
+
+        </div>
 
 </body>
 
